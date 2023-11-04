@@ -13,6 +13,12 @@
 		2F2D07A92AF0C09200FAB260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F2D07A72AF0C09200FAB260 /* Main.storyboard */; };
 		2F2D07AB2AF0C09300FAB260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F2D07AA2AF0C09300FAB260 /* Assets.xcassets */; };
 		2F2D07AE2AF0C09300FAB260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F2D07AC2AF0C09300FAB260 /* LaunchScreen.storyboard */; };
+		2F2D07B72AF0C0B200FAB260 /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D07B62AF0C0B200FAB260 /* LazyImageView.swift */; };
+		2F2D07BA2AF0C14100FAB260 /* GalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D07B82AF0C14100FAB260 /* GalleryTableViewCell.swift */; };
+		2F2D07BB2AF0C14100FAB260 /* GalleryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2D07B92AF0C14100FAB260 /* GalleryTableViewCell.xib */; };
+		2F2D07BD2AF0C2FD00FAB260 /* AnimalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D07BC2AF0C2FD00FAB260 /* AnimalResponse.swift */; };
+		2F2D07BF2AF0C4A200FAB260 /* AnimalResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D07BE2AF0C4A200FAB260 /* AnimalResource.swift */; };
+		2F97E1862AF655F300103BE4 /* paw.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F97E1852AF655F300103BE4 /* paw.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		2F2D07AA2AF0C09300FAB260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F2D07AD2AF0C09300FAB260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F2D07AF2AF0C09300FAB260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F2D07B62AF0C0B200FAB260 /* LazyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyImageView.swift; sourceTree = "<group>"; };
+		2F2D07B82AF0C14100FAB260 /* GalleryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTableViewCell.swift; sourceTree = "<group>"; };
+		2F2D07B92AF0C14100FAB260 /* GalleryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryTableViewCell.xib; sourceTree = "<group>"; };
+		2F2D07BC2AF0C2FD00FAB260 /* AnimalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalResponse.swift; sourceTree = "<group>"; };
+		2F2D07BE2AF0C4A200FAB260 /* AnimalResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalResource.swift; sourceTree = "<group>"; };
+		2F97E1852AF655F300103BE4 /* paw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paw.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,37 @@
 		2F2D07A02AF0C09200FAB260 /* LazyAnimalGallery */ = {
 			isa = PBXGroup;
 			children = (
+				2F2D07B52AF0C09D00FAB260 /* Utility */,
 				2F2D07A12AF0C09200FAB260 /* AppDelegate.swift */,
 				2F2D07A32AF0C09200FAB260 /* SceneDelegate.swift */,
 				2F2D07A52AF0C09200FAB260 /* ViewController.swift */,
 				2F2D07A72AF0C09200FAB260 /* Main.storyboard */,
 				2F2D07AA2AF0C09300FAB260 /* Assets.xcassets */,
+				2F97E1852AF655F300103BE4 /* paw.png */,
 				2F2D07AC2AF0C09300FAB260 /* LaunchScreen.storyboard */,
 				2F2D07AF2AF0C09300FAB260 /* Info.plist */,
+				2F97E1802AF5F08100103BE4 /* TableViewCellGallery */,
 			);
 			path = LazyAnimalGallery;
+			sourceTree = "<group>";
+		};
+		2F2D07B52AF0C09D00FAB260 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2F2D07B62AF0C0B200FAB260 /* LazyImageView.swift */,
+				2F2D07BC2AF0C2FD00FAB260 /* AnimalResponse.swift */,
+				2F2D07BE2AF0C4A200FAB260 /* AnimalResource.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		2F97E1802AF5F08100103BE4 /* TableViewCellGallery */ = {
+			isa = PBXGroup;
+			children = (
+				2F2D07B82AF0C14100FAB260 /* GalleryTableViewCell.swift */,
+				2F2D07B92AF0C14100FAB260 /* GalleryTableViewCell.xib */,
+			);
+			path = TableViewCellGallery;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +159,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F97E1862AF655F300103BE4 /* paw.png in Resources */,
+				2F2D07BB2AF0C14100FAB260 /* GalleryTableViewCell.xib in Resources */,
 				2F2D07AE2AF0C09300FAB260 /* LaunchScreen.storyboard in Resources */,
 				2F2D07AB2AF0C09300FAB260 /* Assets.xcassets in Resources */,
 				2F2D07A92AF0C09200FAB260 /* Main.storyboard in Resources */,
@@ -138,8 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F2D07BD2AF0C2FD00FAB260 /* AnimalResponse.swift in Sources */,
+				2F2D07B72AF0C0B200FAB260 /* LazyImageView.swift in Sources */,
+				2F2D07BF2AF0C4A200FAB260 /* AnimalResource.swift in Sources */,
 				2F2D07A62AF0C09200FAB260 /* ViewController.swift in Sources */,
 				2F2D07A22AF0C09200FAB260 /* AppDelegate.swift in Sources */,
+				2F2D07BA2AF0C14100FAB260 /* GalleryTableViewCell.swift in Sources */,
 				2F2D07A42AF0C09200FAB260 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
