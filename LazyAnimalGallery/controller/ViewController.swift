@@ -9,11 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     var animals : [Animal]? = nil
     let animalResource : AnimalResource = AnimalResource()
+    var switchHeader : TableHeaderView?
+    private var switchState : Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +25,23 @@ class ViewController: UIViewController {
         
         tableView.register(UINib(nibName: "GalleryTableViewCell", bundle: nil), forCellReuseIdentifier: "GalleryTableViewCell")
         
+        setUpHeaderView()
+        
         animalResource.getAnimals { animalResponse in
             self.animals = animalResponse?.animals
             print(self.animals!)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+        }
+    }
+    
+    func setUpHeaderView(){
+        switchHeader = TableHeaderView(frame: self.headerView.bounds)
+        headerView.addSubview(switchHeader!)
+        switchHeader?.swicthToggleCallback = { switchState in
+            self.switchState = switchState
+            self.tableView.reloadData()
         }
     }
 }
@@ -48,7 +61,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         
         let animalImageURL = URL(string: animal!.image)!
         
-        cell.lazyImageView?.loadImage(fromURL: animalImageURL, with: "paw")
+        cell.lazyImageView.loadImage(fromURL: animalImageURL, with: "animalPlaceHolder", for: self.switchState)
         cell.animalNameLabel?.text = animal?.name
         
         return cell
