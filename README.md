@@ -16,9 +16,12 @@ A demo app to understand and implement the working of Lazy loading concept.
 ## Tech stacks
 
 - Swift - programming language
+
 - Xcode - IDE for developing applications for iOS.
 
 ## Screenshots & Demo
+
+<img src="https://github.com/Pranav108/Lazy-AnimalGallery/assets/56934594/3dafeb4d-2099-4c8e-90ba-ccb959e35a46" height="400">
 
 
 ## Setting Up Your Local Environment
