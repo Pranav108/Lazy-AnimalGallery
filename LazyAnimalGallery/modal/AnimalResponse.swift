@@ -22,3 +22,10 @@ struct Animal: Decodable {
     let image: String
 }
 
+enum RequestError: Error {
+    case invalidUrl
+    case failedRequest(error: Error?)
+    case errorDecode
+    case unknownError
+}
+

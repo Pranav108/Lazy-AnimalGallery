@@ -1,0 +1,33 @@
+# Xcode
+.DS_Store
+*/.DS_Store
+*.swp
+*~
+.project
+*.xcuserstate
+xcuserdata/
+
+# Build products
+build/
+DerivedData/
+*.hmap
+
+# Ignore Pods
+Pods/
+Podfile.lock
+
+# Ignore configuration file created by CocoaPods
+Pods.xcodeproj/
+
+# Swift Package Manager
+.build/
+
+# Carthage
+Carthage/Build/
+
+# Exclude any logs or crash reports
+*.log
+*.crash
+
+# Exclude development pods created by podenv
+.env/

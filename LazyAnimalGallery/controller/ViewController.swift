@@ -27,11 +27,16 @@ class ViewController: UIViewController {
         
         setUpHeaderView()
         
-        animalResource.getAnimals { animalResponse in
-            self.animals = animalResponse?.animals
-            print(self.animals!)
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+        animalResource.getAnimal { animalResponse in
+            switch animalResponse {
+            case .success(let success):
+                self.animals = success
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            case .failure(let failure):
+                print("Failure in animalResponse : ")
+                print(failure.localizedDescription)
             }
         }
     }
